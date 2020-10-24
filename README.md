@@ -4,7 +4,7 @@ Python utility generates Hive Connect hot signing links for perform Hive-Engine 
 Prerequisites:
 Python3 and greater
 
-hivesigner-python-client by @emre
+hivesigner-python-client by @emre [Link](https://github.com/emre/hivesigner-python-client)
 Installation:
 ```
 pip install hivesigner
