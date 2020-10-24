@@ -2,7 +2,7 @@ from hivesigner.client import Client
 
 c = Client() #instantiate client
 
-def get_hive_engine_hc_hot_link(user,HEsymbol,qty,memo):
+def get_he_hc_hot_link(user,HEsymbol,qty,memo):
     url = c.hot_sign(
         "custom_json",
         {
