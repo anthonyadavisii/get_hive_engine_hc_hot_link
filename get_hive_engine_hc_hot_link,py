@@ -1,0 +1,16 @@
+from hivesigner.client import Client
+
+c = Client() #instantiate client
+
+def get_hive_engine_hc_hot_link(user,HEsymbol,qty,memo):
+    url = c.hot_sign(
+        "custom_json",
+        {
+            "authority": "active",
+            "required_auths": "[\""+user+"\"]", #enclosed array in double quotes otherwise inner double quotes will be encoded as single quotes
+            "required_posting_auths": "[]",
+            "id": "ssc-mainnet-hive", #change to ssc-mainnet1 for steem-engine
+            "json": "{\"contractName\":\"tokens\",\"contractAction\":\"transfer\",\"contractPayload\":{\"symbol\":\""+HEsymbol+"\",\"to\":\"hive-dr\",\"quantity\":\""+qty+"\",\"memo\":\""+memo+"\"}}"
+        },
+    )
+    return url
